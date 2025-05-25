@@ -1,7 +1,7 @@
 @page
 @model ResultModel
 
-<div class="card shadow-sm border-0 p-4 bg-white">
+<div class="card p-4 bg-white shadow-sm mb-4">
     <h3 class="mb-4">履歷分析結果</h3>
 
     <div class="mb-3">
@@ -9,10 +9,10 @@
         <div class="p-2 border bg-light">@Model.Summary</div>
     </div>
 
-    <div class="mb-3">
+    @* <div class="mb-3">
         <strong>與職缺的符合度：</strong>
         <div class="p-2 border bg-light">@Model.ResumeScore %</div>
-    </div>
+    </div> *@
 
     <div class="mb-3">
         <strong>AI 建議：</strong>
@@ -20,4 +20,23 @@
     </div>
 
     <a href="/" class="btn btn-secondary">回首頁</a>
+</div>
+
+
+<div id="contact" class="card p-4 bg-white shadow-sm mb-4">
+    <h4>聯絡資訊</h4>
+    <p>Email: brianct1217@gmail.com</p>
+    <p>Linkedin: <a href="https://www.linkedin.com/in/ching-teng-hsiao" target="_blank">ching-teng-hsiao</a></p>
+    <p>GitHub: <a href="https://github.com/teng1217" target="_blank">teng1217</a></p>
+</div>
+
+<div id="feedback" class="card p-4 bg-white shadow-sm mb-4">
+    <h4>使用者意見回饋</h4>
+    <form method="post" action="mailto:brianct1217@gmail.com" enctype="text/plain">
+        <div class="mb-3">
+            <label class="form-label">您的建議：</label>
+            <textarea name="message" rows="4" class="form-control" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">送出意見</button>
+    </form>
 </div>

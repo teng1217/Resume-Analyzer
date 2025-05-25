@@ -1,5 +1,6 @@
 using System.Text;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 
 public class OpenAIService
 {
@@ -46,10 +47,23 @@ public class OpenAIService
     public Task<string> GetSuggestionsAsync(string resume, string job) =>
         CallOpenAIAsync("根據以下職缺與履歷，請給出三點具體的修改建議：\n職缺：" + job, resume);
 
-    public async Task<int> GetResumeScoreAsync(string resume, string job)
-    {
-        var result = await CallOpenAIAsync("根據職缺與履歷內容，請給這份履歷與該職缺的匹配度打分（0-100且說明原因）：\n職缺：" + job, resume);
-        var match = System.Text.RegularExpressions.Regex.Match(result, @"\d+");
-        return match.Success ? int.Parse(match.Value) : 0;
-    }
+    // public async Task<int> GetResumeScoreAsync(string resume, string job)
+    // {
+    //     var result = await CallOpenAIAsync("根據職缺與履歷內容，請給這份履歷與該職缺的匹配度打分（0-100且說明原因）：\n職缺：" + job, resume);
+    //     var match = System.Text.RegularExpressions.Regex.Match(result, @"\d+");
+    //     return match.Success ? int.Parse(match.Value) : 0;
+    // }
+    // public static int ExtractPercentage(string content)
+    // {
+    //     var match = Regex.Match(content, @"\b(\d{1,3})\s*%?");
+    //     int percentage = 0;
+
+    //     if (match.Success && int.TryParse(match.Groups[1].Value, out percentage))
+    //     {
+    //         percentage = Math.Clamp(percentage, 0, 100); // 確保百分比在 0-100 間
+    //     }
+
+    //     return percentage;
+    // }
+
 }

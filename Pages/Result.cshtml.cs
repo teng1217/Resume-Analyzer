@@ -32,7 +32,7 @@ public class ResultModel : PageModel
             Summary = await _openAI.GetSummaryAsync(resume);
             Skills = await _openAI.GetSkillsAsync(resume);
             Suggestions = await _openAI.GetSuggestionsAsync(resume, job);
-            ResumeScore = await _openAI.GetResumeScoreAsync(resume, job);
+            // ResumeScore = await _openAI.GetResumeScoreAsync(resume, job);
         }
         catch (Exception ex)
         {

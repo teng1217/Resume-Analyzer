@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ResumeAnalyzerClean")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+efe94d301235f7301e3f480a95dd20dd97376bd5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d31584bf4e40166ebf4eeef043cb93d0c014a61")]
 [assembly: System.Reflection.AssemblyProductAttribute("ResumeAnalyzerClean")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ResumeAnalyzerClean")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
