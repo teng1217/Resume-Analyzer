@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+
+<h2>履歷分析工具</h2>
+
+<form method="post">
+    <label>貼上你的履歷：</label><br />
+    <textarea asp-for="ResumeText" rows="10" cols="80"></textarea><br /><br />
+
+    <label>貼上目標職缺說明：</label><br />
+    <textarea asp-for="JobDescription" rows="5" cols="80"></textarea><br /><br />
+
+    <button type="submit">開始分析</button>
+</form>

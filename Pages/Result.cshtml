@@ -1,0 +1,23 @@
+@page
+@model ResultModel
+
+<h2>履歷分析結果</h2>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div style="color:red;">@Model.ErrorMessage</div>
+}
+else
+{
+    <h3>摘要：</h3>
+    <p>@Model.Summary</p>
+
+    <h3>技能清單：</h3>
+    <p>@Model.Skills</p>
+
+    <h3>改善建議：</h3>
+    <p>@Model.Suggestions</p>
+
+    <h3>履歷分數：</h3>
+    <p>@Model.ResumeScore / 100</p>
+}
