@@ -44,11 +44,11 @@ public class OpenAIService
         CallOpenAIAsync("請從以下履歷內容中擷取出技能清單：", resume);
 
     public Task<string> GetSuggestionsAsync(string resume, string job) =>
-        CallOpenAIAsync("根據以下職缺與履歷，請給出三點改善建議：\n職缺：" + job, resume);
+        CallOpenAIAsync("根據以下職缺與履歷，請給出三點具體的修改建議：\n職缺：" + job, resume);
 
     public async Task<int> GetResumeScoreAsync(string resume, string job)
     {
-        var result = await CallOpenAIAsync("根據職缺與履歷內容，請給這份履歷與該職缺的匹配度打分（0-100）：\n職缺：" + job, resume);
+        var result = await CallOpenAIAsync("根據職缺與履歷內容，請給這份履歷與該職缺的匹配度打分（0-100且說明原因）：\n職缺：" + job, resume);
         var match = System.Text.RegularExpressions.Regex.Match(result, @"\d+");
         return match.Success ? int.Parse(match.Value) : 0;
     }

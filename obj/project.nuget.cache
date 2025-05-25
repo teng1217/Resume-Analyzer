@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1uBHhH8zd0E=",
+  "dgSpecHash": "OUc75DKU7pA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\ResumeAnalyzerClean\\ResumeAnalyzerClean.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\user\\Documents\\GitHub\\Resume-Analyzer\\ResumeAnalyzerClean.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\pdfpig\\0.1.10\\pdfpig.0.1.10.nupkg.sha512"
+  ],
   "logs": []
 }

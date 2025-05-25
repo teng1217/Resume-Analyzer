@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\ResumeAnalyzerClean\\ResumeAnalyzerClean.csproj": {}
+    "C:\\Users\\user\\Documents\\GitHub\\Resume-Analyzer\\ResumeAnalyzerClean.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\ResumeAnalyzerClean\\ResumeAnalyzerClean.csproj": {
+    "C:\\Users\\user\\Documents\\GitHub\\Resume-Analyzer\\ResumeAnalyzerClean.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\ResumeAnalyzerClean\\ResumeAnalyzerClean.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\Resume-Analyzer\\ResumeAnalyzerClean.csproj",
         "projectName": "ResumeAnalyzerClean",
-        "projectPath": "C:\\Users\\user\\ResumeAnalyzerClean\\ResumeAnalyzerClean.csproj",
+        "projectPath": "C:\\Users\\user\\Documents\\GitHub\\Resume-Analyzer\\ResumeAnalyzerClean.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\ResumeAnalyzerClean\\obj\\",
+        "outputPath": "C:\\Users\\user\\Documents\\GitHub\\Resume-Analyzer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,6 +43,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "PdfPig": {
+              "target": "Package",
+              "version": "[0.1.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

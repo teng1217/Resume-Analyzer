@@ -1,14 +1,26 @@
 ﻿@page
 @model IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
-<h2>履歷分析工具</h2>
+<div class="card shadow-sm border-0 p-4 bg-white">
+    <h2 class="mb-4">📄 智慧履歷分析</h2>
 
-<form method="post">
-    <label>貼上你的履歷：</label><br />
-    <textarea asp-for="ResumeText" rows="10" cols="80"></textarea><br /><br />
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label class="form-label">上傳 PDF 履歷：</label>
+            <input type="file" asp-for="ResumeFile" accept=".pdf" class="form-control" />
+        </div>
 
-    <label>貼上目標職缺說明：</label><br />
-    <textarea asp-for="JobDescription" rows="5" cols="80"></textarea><br /><br />
+        <div class="mb-3">
+            <label class="form-label">或直接貼上履歷文字：</label>
+            <textarea asp-for="ResumeText" rows="6" class="form-control"></textarea>
+        </div>
 
-    <button type="submit">開始分析</button>
-</form>
+        <div class="mb-3">
+            <label class="form-label">目標職缺說明：</label>
+            <textarea asp-for="JobDescription" rows="4" class="form-control"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">🚀 開始分析</button>
+    </form>
+</div>

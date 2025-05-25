@@ -23,7 +23,7 @@ public class ResultModel : PageModel
 
         if (string.IsNullOrEmpty(resume) || string.IsNullOrEmpty(job))
         {
-            ErrorMessage = "? 無法取得履歷或職缺內容，請返回重新上傳。";
+            ErrorMessage = "無法取得履歷或職缺內容，請返回重新上傳。";
             return;
         }
 
@@ -36,7 +36,7 @@ public class ResultModel : PageModel
         }
         catch (Exception ex)
         {
-            ErrorMessage = $"? 發生錯誤：{ex.Message}";
+            ErrorMessage = $"發生錯誤：{ex.Message}";
         }
     }
 }

@@ -1,23 +1,23 @@
 @page
 @model ResultModel
 
-<h2>履歷分析結果</h2>
+<div class="card shadow-sm border-0 p-4 bg-white">
+    <h3 class="mb-4">履歷分析結果</h3>
 
-@if (!string.IsNullOrEmpty(Model.ErrorMessage))
-{
-    <div style="color:red;">@Model.ErrorMessage</div>
-}
-else
-{
-    <h3>摘要：</h3>
-    <p>@Model.Summary</p>
+    <div class="mb-3">
+        <strong>履歷摘要：</strong>
+        <div class="p-2 border bg-light">@Model.Summary</div>
+    </div>
 
-    <h3>技能清單：</h3>
-    <p>@Model.Skills</p>
+    <div class="mb-3">
+        <strong>與職缺的符合度：</strong>
+        <div class="p-2 border bg-light">@Model.ResumeScore %</div>
+    </div>
 
-    <h3>改善建議：</h3>
-    <p>@Model.Suggestions</p>
+    <div class="mb-3">
+        <strong>AI 建議：</strong>
+        <div class="p-3 border bg-light" style="white-space: pre-wrap;">@Model.Suggestions</div>
+    </div>
 
-    <h3>履歷分數：</h3>
-    <p>@Model.ResumeScore / 100</p>
-}
+    <a href="/" class="btn btn-secondary">回首頁</a>
+</div>
