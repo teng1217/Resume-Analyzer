@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 public class OpenAIService
 {
     private readonly HttpClient _httpClient;
-    private readonly string _apiKey = "8ljsbXU19Uiw7Gt7iCnBGivld2J5vOwsohGG0t6FRA6upJ27iPL2JQQJ99BEACHYHv6XJ3w3AAAAACOGpRQ8";
+    private readonly string _apiKey = "useYourOwnApiKey";
     private readonly string _endpoint = "https://tenge-mb39qyqo-eastus2.cognitiveservices.azure.com/openai/deployments/resume-gpt/chat/completions?api-version=2025-01-01-preview";
 
     public OpenAIService(HttpClient httpClient)
@@ -39,17 +39,17 @@ public class OpenAIService
     }
 
     public Task<string> GetSummaryAsync(string resume) =>
-        CallOpenAIAsync("½Ğ±N¥H¤U¼i¾ú¤º®eºK­n¦¨¤@¬qÂ²µu¤¶²Ğ¡G", resume);
+        CallOpenAIAsync("è«‹å°‡ä»¥ä¸‹å±¥æ­·å…§å®¹æ‘˜è¦æˆä¸€æ®µç°¡çŸ­ä»‹ç´¹ï¼š", resume);
 
     public Task<string> GetSkillsAsync(string resume) =>
-        CallOpenAIAsync("½Ğ±q¥H¤U¼i¾ú¤º®e¤¤Â^¨ú¥X§Ş¯à²M³æ¡G", resume);
+        CallOpenAIAsync("è«‹å¾ä»¥ä¸‹å±¥æ­·å…§å®¹ä¸­æ“·å–å‡ºæŠ€èƒ½æ¸…å–®ï¼š", resume);
 
     public Task<string> GetSuggestionsAsync(string resume, string job) =>
-        CallOpenAIAsync("®Ú¾Ú¥H¤UÂ¾¯Ê»P¼i¾ú¡A½Ğµ¹¥X¤TÂI¨ãÅéªº­×§ï«ØÄ³¡G\nÂ¾¯Ê¡G" + job, resume);
+        CallOpenAIAsync("æ ¹æ“šä»¥ä¸‹è·ç¼ºèˆ‡å±¥æ­·ï¼Œè«‹çµ¦å‡ºä¸‰é»å…·é«”çš„ä¿®æ”¹å»ºè­°ï¼š\nè·ç¼ºï¼š" + job, resume);
 
     // public async Task<int> GetResumeScoreAsync(string resume, string job)
     // {
-    //     var result = await CallOpenAIAsync("®Ú¾ÚÂ¾¯Ê»P¼i¾ú¤º®e¡A½Ğµ¹³o¥÷¼i¾ú»P¸ÓÂ¾¯Êªº¤Ç°t«×¥´¤À¡]0-100¥B»¡©ú­ì¦]¡^¡G\nÂ¾¯Ê¡G" + job, resume);
+    //     var result = await CallOpenAIAsync("æ ¹æ“šè·ç¼ºèˆ‡å±¥æ­·å…§å®¹ï¼Œè«‹çµ¦é€™ä»½å±¥æ­·èˆ‡è©²è·ç¼ºçš„åŒ¹é…åº¦æ‰“åˆ†ï¼ˆ0-100ä¸”èªªæ˜åŸå› ï¼‰ï¼š\nè·ç¼ºï¼š" + job, resume);
     //     var match = System.Text.RegularExpressions.Regex.Match(result, @"\d+");
     //     return match.Success ? int.Parse(match.Value) : 0;
     // }
@@ -60,7 +60,7 @@ public class OpenAIService
 
     //     if (match.Success && int.TryParse(match.Groups[1].Value, out percentage))
     //     {
-    //         percentage = Math.Clamp(percentage, 0, 100); // ½T«O¦Ê¤À¤ñ¦b 0-100 ¶¡
+    //         percentage = Math.Clamp(percentage, 0, 100); // ç¢ºä¿ç™¾åˆ†æ¯”åœ¨ 0-100 é–“
     //     }
 
     //     return percentage;
